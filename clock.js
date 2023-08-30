@@ -8,7 +8,7 @@ setInterval(() => {
     let hours = currentTime.getHours();
     let ampm = hours >= 12 ? 'PM' : 'AM';
 
-    hours = hours % 12 || 12; // Convert to 12-hour format
+    hours = hours % 12 || 12; 
     let minutes = currentTime.getMinutes();
     let seconds = currentTime.getSeconds();
 
