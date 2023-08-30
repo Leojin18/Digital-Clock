@@ -1,0 +1,104 @@
+*{
+    
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+  
+    padding-left: 50px;
+    padding-right: 50px;
+   margin: 0 auto ;
+   
+   background: radial-gradient(263px at 100.2% 3%, rgb(12, 85, 141) 31.1%, rgb(205, 181, 93) 36.4%, rgb(244, 102, 90) 50.9%, rgb(199, 206, 187) 60.7%, rgb(249, 140, 69) 72.5%, rgb(12, 73, 116) 72.6%);
+    border-radius: 6px;
+    align-items: center;
+}
+
+.container{
+
+    display: flex;
+    align-items: center;
+text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  border-radius: 6px;
+    width: 800px;
+    height: 180px;
+   
+    transform: translate(-50%,-50%);
+}
+.container p{
+    color: #fff;
+    background: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+   
+}
+.clock{
+  
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);  
+    box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.37) ; 
+    
+    background-image: linear-gradient(135deg,rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+}
+.container::before{
+    content: '';
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+    border-radius: 6px;
+height: 180px;
+width: 180px;
+background: violet;
+}
+.container::after{
+    content: '';
+    position: absolute;
+    right:  -30px;
+    bottom:  -50px;
+    z-index: -1;
+    border-radius: 50%;
+height: 180px;
+width: 180px;
+background: cyan;
+}
+.clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+     }
+.clock span::after{
+left: 50%;
+bottom: -5px;
+position: absolute;
+content: '';
+font-size: 15px;
+transform: translateX(-50%);
+   }  
+#hrs::after{
+content: 'Hours';
+}
+#min::after{
+    content: 'Minutes';
+}
+#sec::after{
+    content: 'Seconds';
+} 
+@keyframes animate{
+100%{
+filter: hue-rotate(360deg);
+}
+}
